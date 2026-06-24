@@ -1,0 +1,191 @@
+@import "tailwindcss";
+
+/* ── Brand tokens ─────────────────────────────────────────────── */
+:root {
+  --ui-green:       #1B6B3A;
+  --ui-green-dark:  #0A2E1A;
+  --ui-green-mid:   #2D8653;
+  --ui-green-light: #EDF7F0;
+  --ui-gold:        #C9A84C;
+  --ui-gold-light:  #F5E6BB;
+}
+
+/* ── Tailwind theme registration ──────────────────────────────── */
+@theme inline {
+  --color-ui-green:       var(--ui-green);
+  --color-ui-green-dark:  var(--ui-green-dark);
+  --color-ui-green-mid:   var(--ui-green-mid);
+  --color-ui-green-light: var(--ui-green-light);
+  --color-ui-gold:        var(--ui-gold);
+  --color-ui-gold-light:  var(--ui-gold-light);
+  --font-sans:    var(--font-geist-sans);
+  --font-mono:    var(--font-geist-mono);
+  --font-jakarta: var(--font-jakarta);
+}
+
+/* ── Custom utilities ─────────────────────────────────────────── */
+@utility hero-bg {
+  background: linear-gradient(135deg, #0A2E1A 0%, #1B6B3A 45%, #0A2E1A 100%);
+}
+
+@utility nav-glass {
+  background: rgba(10, 46, 26, 0.96);
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+}
+
+@utility badge-highlight {
+  background: rgba(201, 168, 76, 0.15);
+  border: 1px solid rgba(201, 168, 76, 0.4);
+  color: #C9A84C;
+}
+
+@utility stat-card {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+@utility glass-card {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+}
+
+@utility hero-decor-circle {
+  background: #C9A84C;
+  border-radius: 9999px;
+  opacity: 0.10;
+}
+
+@utility hero-dot-grid {
+  background-image: radial-gradient(circle, rgba(201,168,76,0.25) 1px, transparent 1px);
+  background-size: 32px 32px;
+}
+
+@utility section-border {
+  border-color: #E5F0EA;
+}
+
+@utility gold-seal {
+  background: rgba(201, 168, 76, 0.12);
+  border: 3px solid #C9A84C;
+}
+
+@utility lp-grid {
+  background-image:
+    linear-gradient(rgba(201, 168, 76, 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(201, 168, 76, 0.035) 1px, transparent 1px);
+  background-size: 64px 64px;
+}
+
+@utility election-card {
+  background: rgba(4, 12, 6, 0.88);
+  border: 1px solid rgba(201, 168, 76, 0.22);
+  -webkit-backdrop-filter: blur(24px);
+  backdrop-filter: blur(24px);
+  box-shadow: 0 32px 80px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(201, 168, 76, 0.1);
+}
+
+@utility election-row {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  transition: background 0.15s;
+}
+
+@utility lp-feature-card {
+  background: rgba(255, 255, 255, 0.025);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  transition: background 0.2s, border-color 0.2s, transform 0.2s;
+}
+
+@utility howto-card {
+  background: white;
+  border: 1px solid #E9F2EC;
+  box-shadow: 0 2px 12px rgba(27, 107, 58, 0.05), 0 8px 40px rgba(0, 0, 0, 0.03);
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+
+@utility cta-section {
+  background: linear-gradient(135deg, #071A0C 0%, #1B6B3A 55%, #071A0C 100%);
+}
+
+@utility election-glow {
+  background: radial-gradient(ellipse at center, rgba(27, 107, 58, 0.45) 0%, transparent 68%);
+}
+
+@utility gold-glow {
+  background: radial-gradient(ellipse at center, rgba(201, 168, 76, 0.18) 0%, transparent 68%);
+}
+
+@utility lp-footer {
+  background: #030806;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+
+@utility tag-pill {
+  display: inline-flex;
+  align-items: center;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  padding: 0.25rem 0.65rem;
+  border-radius: 9999px;
+  border-width: 1px;
+  border-style: solid;
+}
+
+@utility admin-sidebar {
+  background: linear-gradient(180deg, #071710 0%, #0A2E1A 60%, #0d3820 100%);
+}
+
+@utility admin-nav-item {
+  color: rgba(255, 255, 255, 0.60);
+  border-radius: 0.75rem;
+  transition: background 0.15s, color 0.15s;
+}
+
+@utility admin-nav-item-active {
+  background: rgba(201, 168, 76, 0.15);
+  border: 1px solid rgba(201, 168, 76, 0.25);
+  color: #C9A84C;
+  font-weight: 700;
+}
+
+@utility admin-font {
+  font-family: var(--font-jakarta), system-ui, sans-serif;
+}
+
+@utility turnout-bar {
+  background: linear-gradient(90deg, #1B6B3A, #2D8653);
+  height: 100%;
+  border-radius: 9999px;
+  transition: width 0.7s ease-out;
+}
+
+@utility vote-progress-bar {
+  width: var(--vote-pct, 0%);
+  height: 100%;
+  background-color: #1B6B3A;
+  border-radius: 9999px;
+  transition: width 0.5s ease-out;
+}
+
+
+/* ── Global base ──────────────────────────────────────────────── */
+body {
+  font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  color: #111827;
+}
+
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: #f1f1f1; }
+::-webkit-scrollbar-thumb { background: #2D8653; border-radius: 3px; }
+
+*:focus-visible {
+  outline: 2px solid #1B6B3A;
+  outline-offset: 2px;
+}
