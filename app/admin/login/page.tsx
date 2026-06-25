@@ -77,7 +77,7 @@ export default function AdminLoginPage() {
                   type="email"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
-                  placeholder="admin@votingplatform.com"
+                  placeholder="admin.com"
                   required
                   className="w-full pl-10 pr-4 py-3 rounded-xl border border-gray-200 text-gray-900 placeholder-gray-400 text-sm focus:border-ui-green focus:ring-2 focus:ring-ui-green/20 outline-none transition-all"
                 />
