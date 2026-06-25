@@ -114,9 +114,9 @@ export default function VoterLoginPage() {
             </svg>
             Back to home
           </Link>
-          <Link href="/admin/login" className="text-[11px] text-gray-400 hover:text-ui-green font-semibold transition-colors">
+         {/*  <Link href="/admin/login" className="text-[11px] text-gray-400 hover:text-ui-green font-semibold transition-colors">
             Admin Portal →
-          </Link>
+          </Link> */}
         </div>
 
         {/* Form — centred */}
@@ -189,9 +189,6 @@ export default function VoterLoginPage() {
                   <label className="block text-[11px] font-bold text-gray-400 uppercase tracking-wider">
                     Password
                   </label>
-                  <Link href="/forgot-password" className="text-[11px] text-ui-green font-semibold hover:underline">
-                    Forgot password?
-                  </Link>
                 </div>
                 <div className="relative">
                   <div className="absolute left-3.5 top-1/2 -translate-y-1/2 text-gray-300 pointer-events-none">
