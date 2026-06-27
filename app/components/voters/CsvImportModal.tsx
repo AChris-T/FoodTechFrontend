@@ -41,7 +41,7 @@ export default function CsvImportModal({ ctx }: { ctx: UseVotersReturn }) {
                 <p className="text-xs text-gray-400 mt-1">Max 5 MB · .csv only</p>
               </>
             )}
-            <input ref={ref} type="file" accept=".csv,text/csv" className="hidden"
+            <input ref={ref} type="file" accept="text" className="hidden"
               title="Upload CSV file" aria-label="Upload CSV file"
               onChange={e => { setCsvFile(e.target.files?.[0] ?? null); }} />
           </div>
